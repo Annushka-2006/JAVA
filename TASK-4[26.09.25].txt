@@ -1,0 +1,184 @@
+1. SWAP NUMBERS----
+
+import java.util.Scanner;
+public class Main{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter number1: ");
+        int a=sc.nextInt();
+        System.out.println("Enter number2: ");
+        int b=sc.nextInt();
+        a=a+b;
+        b=a-b;
+        a=a-b;
+System.out.println("After swapping: a = " + a + ", b = " + b);
+    }
+}
+2.  PALINDROME----
+
+import java.util.Scanner;
+public class Main{
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter a String:");
+    String a = sc.nextLine();
+    StringBuffer sb = new StringBuffer(a);
+    sb.reverse();  
+    if(a.equals(sb.toString())) {
+        System.out.println("It is palindrome, " + a);
+    }else {
+       System.out.println("It is not a palindrome, " + a);
+    }  
+    }
+}
+3. RECURSION FACTORIAL----
+
+import java.util.Scanner;
+public class RecursiveExample{
+    public int factorial(int n){
+        if(n == 0 || n == 1){
+            return 1;
+        }else{
+            return n * factorial(n - 1);
+        }
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println("Enter n value:");
+        RecursiveExample obj = new RecursiveExample();
+        System.out.println("Factorial of  : " + obj.factorial(n));
+    }
+}
+4.PRIME NUMBER-----
+
+import java.util.Scanner; 
+public class PrimeChecker {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number to check if it's prime: ");
+        int number = scanner.nextInt();
+
+        if (isPrime(number)) {
+            System.out.println(number + " is a prime number.");
+        } else {
+            System.out.println(number + " is not a prime number.");
+        }
+        scanner.close(); 
+    }
+    public static boolean isPrime(int n) {
+        if (n <= 1) { 
+            return false;
+        }
+        if (n == 2) { 
+            return true;
+        }
+        if (n % 2 == 0) { 
+            return false;
+        }
+        for (int i = 3; i <= Math.sqrt(n); i += 2) {
+            if (n % i == 0) {
+                return false; 
+            }
+        }
+        return true; 
+    }
+}
+5. COUNT THE VOWELS----
+
+import java.util.Scanner;
+
+public class CountVowels {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = sc.nextLine();
+
+        int count = 0;
+        input = input.toLowerCase(); 
+
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i);
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                count++;
+            }
+        }
+
+        System.out.println("Number of vowels: " + count);
+        sc.close();
+    }
+}
+                                                  MINI TASK-----
+6.   TRAIN TICKET BOOKING SYSTEM----
+
+import java.util.Scanner;
+public class TrainTicket {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("1. Ticket Booking");
+        System.out.println("2. Ticket Cancellation");
+        System.out.print("Enter your choice: ");
+        int choice = scanner.nextInt();
+        scanner.nextLine(); 
+
+        if (choice == 1) {
+            // Booking section
+            System.out.print("Enter your departure place: ");
+            String departure = scanner.nextLine();
+
+            System.out.print("Enter destination: ");
+            String destination = scanner.nextLine();
+
+            System.out.print("Enter your name: ");
+            String name = scanner.nextLine();
+
+            System.out.print("Enter number of tickets: ");
+            int totalTickets = scanner.nextInt();
+
+            System.out.print("Enter your contact number: ");
+            long contactNumber = scanner.nextLong();
+
+            System.out.print("Enter the number of adults: ");
+            int numAdults = scanner.nextInt();
+
+            System.out.print("Enter the number of children: ");
+            int numChildren = scanner.nextInt();
+
+            System.out.print("Enter the number of disabled people: ");
+            int numDisabled = scanner.nextInt();
+
+            // Cost calculation
+            int cost = numAdults * 100 + numChildren * 50 + numDisabled * 30;
+            System.out.println("Total Cost: ₹" + cost);
+
+            System.out.println("Do you want to confirm the booking?");
+            System.out.println("1. Yes\n2. No");
+            int confirm = scanner.nextInt();
+
+            if (confirm == 1) {
+                System.out.println("Booking Confirmed!");
+                System.out.println("Thank you, " + name + ". Safe travels from " + departure + " to " + destination + ".");
+            } else {
+                System.out.println("Booking Cancelled.");
+            }
+
+        } else if (choice == 2) {
+            System.out.println("Processing cancellation...");
+
+            System.out.print("Enter the ticket number: ");
+            long ticketNumber = scanner.nextLong();
+
+            System.out.print("Enter the number of tickets booked: ");
+            int bookedTickets = scanner.nextInt();
+
+            int refund = bookedTickets * 45;
+            System.out.println("A refund of ₹" + refund + " will be processed within 12 business days.");
+        } else {
+            System.out.println("Invalid choice. Please restart the program.");
+        }
+
+        scanner.close();
+    }
+}

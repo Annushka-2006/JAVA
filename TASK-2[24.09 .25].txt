@@ -1,0 +1,82 @@
+1.    ODD OR EVEN---
+import java.util.Scanner;
+public class OddOrEven {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int a = reader.nextInt();
+        if(a % 2==0){
+            System.out.println(a + " is even");
+        } else{
+            System.out.println(a + " is odd");
+        }
+    }
+}
+2.   POSITIVE OR NEGATIVE---
+import java.util.Scanner;
+public class PositiveOrNegative {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int a = reader.nextInt();
+        if(a > 0){
+            System.out.println(a + "  is Positive");
+        } else if(a < 0){
+            System.out.println(a + "  is Negative");
+        }
+        else{
+            System.out.println(a + "  is Zero");
+        }
+    }
+}
+3.   LARGEST THREE NUMBERS---
+import java.util.Scanner;
+public class ThreeLargest {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Enter a number 1: ");
+        int a = reader.nextInt();
+        System.out.println("Enter a number 2: ");
+        int b = reader.nextInt();
+        System.out.println("Enter a number 3: ");
+        int c = reader.nextInt();
+        if(a > b && a > c){
+            System.out.println(a + "  is Largest");
+        } else if(b > a && b > c){
+            System.out.println(b + "  is Largest");
+        }
+        else{
+            System.out.println(c + "  is Largest");
+        }
+    }
+}
+4.   LARGEST TWO NUMBERS---
+import java.util.Scanner;
+public class TwoLargest {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Enter a number 1: ");
+        int a = reader.nextInt();
+        System.out.println("Enter a number 2: ");
+        int b = reader.nextInt();
+        if(a > b){
+            System.out.println(a + " is Largest");
+        } else if(b > a){
+            System.out.println(b + " is Largest");
+        }
+    }
+}
+5.   ELIGIBLE TO VOTE---
+import java.util.Scanner;
+public class PositiveOrNegative {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Enter your Age: ");
+        int age = reader.nextInt();
+        if(age >= 18){
+            System.out.println(age + ",you are eligible to vote.");
+        } else {
+            System.out.println(age + ",your are not eligible to vote. ");
+        }
+    }
+}
